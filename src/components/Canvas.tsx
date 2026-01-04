@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './Canvas.css';
 
-const Canvas: React.FC = () => {
+const Canvas = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
   const lastPointRef = useRef<{ x: number; y: number } | null>(null);
@@ -89,7 +89,7 @@ const Canvas: React.FC = () => {
     };
   }, []);
 
-  return <canvas className="fullscreen-canvas" ref={canvasRef} />;
+  return <canvas className="canvas" ref={canvasRef} />;
 };
 
 export default Canvas;
